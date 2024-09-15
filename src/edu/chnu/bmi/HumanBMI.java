@@ -40,25 +40,25 @@ public class HumanBMI {
 		bmi = weight / (height * height);
 	}
 
-	public ImbResult getResult() {
-		ImbResult string = null;
+	public BMIResult getResult() {
+		BMIResult string = null;
 		if (bmi < 18.5) {
-			string = ImbResult.DEFICIT;
+			string = BMIResult.DEFICIT;
 		} else if (bmi >= 18.5 && bmi < 25) {
-			string = ImbResult.NORM;
+			string = BMIResult.NORM;
 		} else if (bmi >= 25 & bmi < 30) {
-			string = ImbResult.WARNING;
+			string = BMIResult.WARNING;
 		} else if (bmi >= 30) {
-			string = ImbResult.FAT;
+			string = BMIResult.FAT;
 		}
 
 		return string;
 	}
 	
-	public static enum ImbResult{
+	public static enum BMIResult{
 		DEFICIT("Deficit"), NORM("Norm"), WARNING("Warning!"), FAT("Fat");
 		private String label;
-		private ImbResult(String label) {
+		private BMIResult(String label) {
 			this.label = label;
 		}
 		
