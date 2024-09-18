@@ -41,18 +41,18 @@ public class HumanBMI {
 	}
 
 	public BMIResult getResult() {
-		BMIResult string = null;
+		BMIResult result = null;
 		if (bmi < 18.5) {
-			string = BMIResult.DEFICIT;
+			result = BMIResult.DEFICIT;
 		} else if (bmi >= 18.5 && bmi < 25) {
-			string = BMIResult.NORM;
+			result = BMIResult.NORM;
 		} else if (bmi >= 25 & bmi < 30) {
-			string = BMIResult.WARNING;
+			result = BMIResult.WARNING;
 		} else if (bmi >= 30) {
-			string = BMIResult.FAT;
+			result = BMIResult.FAT;
 		}
 
-		return string;
+		return result;
 	}
 	
 	public static enum BMIResult{
